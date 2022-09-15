@@ -9,5 +9,20 @@ const produtos = [
     { nome: "Vinho Tinto", categoria: "Bebidas", preco: 55 },
     { nome: "Berinjela kg", categoria: "Hortifruti", preco: 8.99 },
     { nome: "Sabão em Pó", categoria: "Limpeza", preco: 10.80 }
- ]
- 
+]
+
+//Dado um array de produtos, onde cada produto é um objeto com nome, preço e categoria, retorne um novo array com o nome dos produtos da categoria Limpeza.
+
+//  const categoriaLimpeza = produtos.filter((produtos) => {
+//     return produtos.categoria === "Limpeza"
+//  })
+//  console.log(categoriaLimpeza)
+
+// 
+const categoriaLimpeza = produtos.filter((produtos) => {
+    return produtos.categoria === "Limpeza"
+}).map((produtos) => {
+    return produtos.nome
+})
+
+console.log(categoriaLimpeza)
